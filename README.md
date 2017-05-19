@@ -1,1 +1,3 @@
 # 11tkjb.github.io
+# FVCK THE SYSTEM
+# FVCK THE ACADEMIST
