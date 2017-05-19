@@ -1,0 +1,279 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Web Absensi">
+    <meta name="author" content="Anonymous">
+    <meta name="keyword" content="Kaizen , Team Fiture , SMKN 1 BEKASI , Absensi Web ">
+    <link rel="shortcut icon" href="img/favicon.png">
+
+    <title>Panel</title>
+
+    <!-- Bootstrap core CSS -->
+    <link href="css/bootstrap.min.css" rel="stylesheet">
+    <link href="css/bootstrap-reset.css" rel="stylesheet">
+    <!--external css-->
+    <link href="assets/font-awesome/css/font-awesome.css" rel="stylesheet" />
+    <link href="css/style.css" rel="stylesheet">
+    <link href="css/style-responsive.css" rel="stylesheet" />
+
+	</head>
+
+  <body>
+
+  <section id="container" >
+      <!--header start-->
+      <header class="header white-bg">
+            <div class="sidebar-toggle-box">
+                <div data-original-title="Toggle Navigation" data-placement="right" class="icon-reorder tooltips"></div>
+            </div>
+            <!--logo start-->
+           <a href="home.html" class="logo"> <IMG SRC="img/avatar-mini.jpg" />  VLJE <span> Admin</span></a>
+            <!--logo end-->
+            <div class="nav notify-row" id="top_menu">
+                <!--  notification start -->
+                <ul class="nav top-menu">
+                </ul>
+                <!--  notification end -->
+            </div>
+            <div class="top-nav ">
+                <!--search & user info start-->
+                <ul class="nav pull-right top-menu">
+				<li>	
+					<div id ="dates"></div>
+						<script type='text/javascript'>
+						<!--
+							var months = ['Januari', 'Februari', 'Maret', 'April', 'Mei', 'Juni', 'Juli', 'Agustus', 'September', 'Oktober', 'November', 'Desember'];
+							var myDays = ['Minggu', 'Senin', 'Selasa', 'Rabu', 'Kamis', 'Jum&#39;at', 'Sabtu'];
+							var date = new Date();
+							var day = date.getDate();
+							var month = date.getMonth();
+							var thisDay = date.getDay(),
+							thisDay = myDays[thisDay];
+							var yy = date.getYear();
+							var year = (yy < 1000) ? yy + 1900 : yy;
+							document.getElementById('dates').innerHTML=thisDay + ', ' + day + ' ' + months[month] + ' ' + year;
+							//-->
+						</script>
+
+					<div id="clock"></div>
+						<script type="text/javascript">
+						<!--
+							function showTime() {
+							var a_p = "";
+							var today = new Date();
+							var curr_hour = today.getHours();
+							var curr_minute = today.getMinutes();
+							var curr_second = today.getSeconds();
+							if (curr_hour < 12) {
+							a_p = "AM";
+							} else {
+							a_p = "PM";
+							}
+							if (curr_hour == 0) {
+							curr_hour = 12;
+							}
+							if (curr_hour > 12) {
+							curr_hour = curr_hour - 12;
+							}
+							curr_hour = checkTime(curr_hour);
+							curr_minute = checkTime(curr_minute);
+							curr_second = checkTime(curr_second);
+							document.getElementById('clock').innerHTML=curr_hour + ":" + curr_minute + ":" + curr_second + " " + a_p;
+							}
+
+							function checkTime(i) {
+							if (i < 10) {
+							i = "0" + i;
+							}
+							return i;
+							}
+							setInterval(showTime, 500);
+							//-->
+						</script>
+					</li>
+                    <li>
+                        <input type="text" class="form-control search" placeholder="Search">
+                    </li>
+                    <!-- user login dropdown start-->
+                    <li class="dropdown">
+                        <a data-toggle="dropdown" class="dropdown-toggle" href="#">
+                            <img alt="" src="img/avatar-mini.jpg">
+                            <span class="username">Admin</span>
+                            <b class="caret"></b>
+                        </a>
+                        <ul class="dropdown-menu extended logout">
+                            <div class="log-arrow-up"></div>
+                            <li><a href="login.html"><i class="icon-key"></i> Log Out</a></li>
+                        </ul>
+                    </li>
+                    <!-- user login dropdown end -->
+                </ul>
+                <!--search & user info end-->
+            </div>
+        </header>
+      <!--header end-->
+      <!--sidebar start-->
+      <aside>
+          <div id="sidebar"  class="nav-collapse ">
+              <!-- sidebar menu start-->
+              <ul class="sidebar-menu" id="nav-accordion">
+                  <li>
+                      <a class="active" href="home.html">
+                          <i class="icon-dashboard"></i>
+                          <span>Dashboard</span>
+                      </a>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="icon-laptop"></i>
+                          <span>Panels</span>
+                      </a>
+                      <ul class="sub">
+                          
+                          <li><a href="tabelguru.html" >Panel Guru</a></li>
+                          <li><a href="tabelsiswa.html" >Panel Siswa</a></li>
+						  <li><a href="absent.html" >Absen</a></li>
+                      </ul>
+                  </li>
+
+                  <li class="sub-menu">
+                      <a href="javascript:;" >
+                          <i class="icon-cogs"></i>
+                          <span>Widget</span>
+                      </a>
+                      <ul class="sub">
+                          
+                          <li><a  href="calendar.html">Calendar</a></li>
+                          <li><a  href="todolist.html">To do List</a></li>
+                      </ul>
+                  </li>
+               
+                  <li>
+                      <a  href="login.html">
+                          <i class="icon-user"></i>
+                          <span>Login Page</span>
+                      </a>
+                  </li>
+
+                  
+              </ul>
+              <!-- sidebar menu end-->
+          </div>
+      </aside>
+      <!--sidebar end-->
+      <!--main content start-->
+      <section id="main-content">
+          <section class="wrapper">
+              <!--state overview start-->
+              <div class="row state-overview">
+                  <div class="col-lg-4 col-sm-6">
+                      <section class="panel">
+                          <div class="symbol terques">
+                              <i class="icon-user"></i>
+                          </div>
+                          <div class="value">
+                              <h3>
+                                 <a href="tabelguru.html">Teacher Panel </a>
+                              </h3>
+                          </div>
+                      </section>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                      <section class="panel">
+                          <div class="symbol red">
+                              <i class="icon-user"></i>
+                          </div>
+                          <div class="value">
+                              <h3>
+                                 <a href="tabelsiswa.html"> Student Panel</a>
+                              </h3>
+                              
+                          </div>
+                      </section>
+                  </div>
+                  <div class="col-lg-4 col-sm-6">
+                      <section class="panel">
+                          <div class="symbol yellow">
+                              <i class="icon-calendar"></i>
+                          </div>
+                          <div class="value">
+                              <h3>
+                                <a href="absent.html" > Absen Panel</a>
+                              </h3>
+                          </div>
+                      </section>
+                  </div>
+                  
+              </div>
+              <!--state overview end-->
+
+              <div class="row">
+                  <div class="col-lg-12">
+                      <!--custom chart start-->
+                      <div class="border-head">
+                          <h3>Deskripsi</h3>
+                      </div>
+					<div>
+					<p>Selamat datang di Web kelas 11 TKJ B. Mengenai web ini, merupakah web yang dibuat oleh murid 11 TKJ di SMK N 1 Kota Bekasi. Didalam blog ini
+					kalian dapat menemukan beberapa informasi mengenai kelas 11 TKJ B. TKJ merupakan singkatan dari Teknik Komputer dan Jaringan. 
+					</p>
+					<p> Teknik Komputer jaringan sebagai salah satu program keahlian di SMK Negeri 1 Kota Bekasi menyelenggarakan kegiatan training OpenVPN dan VMWare, hal ini ditujukan untuk mendongkrak kompetensi yang lebih tinggi lagi untuk para murid. Selain itu, ada beberapa kegiatan seperti pengambilan sertifikat Mikrotik yang dilaksanakan oleh guru dari TKJ yang sudah mempunyai sertifikat sebagai trainer.
+					</p>
+					<p>Kompetensi keahlian yang memiliki program pembelajaran tentang merakit PC, antena wajan bolic, komunikasi jaringan, LAN, WAN, Cisco, MikroTik, CentOS, Windows Server 2012, VOIP dll.
+					</p>
+					<p>Software yang dipelajari:
+					</p>
+					<p>1. GNS3.
+					</p>
+					<p>2. VirtualBox.
+					</p>
+					<p>3. Cisco Packet Tracer.
+					</p>
+					<p>4. VMWare.
+					</p>
+					<p>5. WinBox.
+					</p>
+					<p>6. Dan lain-lain.
+					</p>
+					</div>
+                      <!--custom chart end-->
+                  </div>
+                  </div>
+              </div>
+
+          </section>
+      </section>
+      <!--main content end-->
+      <!--footer start-->
+
+      <footer class="site-footer">
+          <div class="text-center">
+              <b>2017 &copy; Team VLJE</b>
+              <a href="#" class="go-top">
+                  <i class="icon-angle-up"></i>
+              </a>
+          </div>
+      </footer>
+
+      <!--footer end-->
+  </section>
+
+    <!-- js placed at the end of the document so the pages load faster -->
+    <script src="js/jquery.js"></script>
+    <script src="js/jquery-1.8.3.min.js"></script>
+    <script src="js/bootstrap.min.js"></script>
+    <script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
+    <script src="js/jquery.scrollTo.min.js"></script>
+    <script src="js/jquery.nicescroll.js" type="text/javascript"></script>
+	<script class="include" type="text/javascript" src="js/jquery.dcjqaccordion.2.7.js"></script>
+
+    <!--common script for all pages-->
+    <script src="js/common-scripts.js"></script>
+
+
+
+  </body>
+</html>
